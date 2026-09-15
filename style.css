@@ -1,0 +1,157 @@
+/* Wowoli — spoločný štýl pre verejné stránky.
+   Rovnaké farby ako v hre, aby to pôsobilo ako jedna vec. */
+
+:root {
+  --bg: #07070f;
+  --card: #141a33;
+  --border: #232b52;
+  --text: #eaf0ff;
+  --dim: #8a93c2;
+  --faint: #5a628c;
+  --cyan: #2bf5ea;
+  --magenta: #ff2fd0;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+/* --- hlavička --- */
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: rgba(7, 7, 15, 0.92);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+.top img { width: 34px; height: 34px; border-radius: 8px; display: block; }
+
+.top a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 3px;
+  font-size: 15px;
+}
+
+.top nav { margin-left: auto; display: flex; gap: 18px; }
+
+.top nav a {
+  color: var(--dim);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.top nav a:hover { color: var(--cyan); }
+
+/* --- úvod --- */
+
+.hero { text-align: center; padding: 48px 0 24px; }
+
+.hero img {
+  width: min(280px, 70vw);
+  height: auto;
+  display: block;
+  margin: 0 auto 24px;
+}
+
+h1 {
+  font-size: clamp(38px, 11vw, 64px);
+  letter-spacing: 8px;
+  margin: 0;
+  font-weight: 900;
+}
+
+.tagline {
+  color: var(--cyan);
+  letter-spacing: 3px;
+  font-size: 13px;
+  margin-top: 6px;
+  text-transform: uppercase;
+}
+
+.lead {
+  color: var(--dim);
+  font-size: 17px;
+  max-width: 460px;
+  margin: 28px auto 0;
+}
+
+/* --- obsah --- */
+
+h2 {
+  color: var(--cyan);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 40px 0 10px;
+}
+
+h2:first-of-type { margin-top: 24px; }
+
+p { color: var(--dim); margin: 0 0 14px; }
+
+ul { color: var(--dim); padding-left: 20px; margin: 0 0 14px; }
+
+li { margin-bottom: 6px; }
+
+li::marker { color: var(--magenta); }
+
+a { color: var(--cyan); }
+
+.updated { color: var(--faint); font-size: 13px; margin-bottom: 8px; }
+
+.page-title {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0 0 4px;
+  letter-spacing: -0.5px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin: 20px 0;
+}
+
+.card p:last-child { margin-bottom: 0; }
+
+/* --- päta --- */
+
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 56px;
+  padding-top: 24px;
+  color: var(--faint);
+  font-size: 13px;
+  text-align: center;
+}
+
+footer a { color: var(--dim); text-decoration: none; margin: 0 10px; }
+
+footer a:hover { color: var(--cyan); }
